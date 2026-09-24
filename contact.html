@@ -1,0 +1,44 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+description: "Le P'tit Café, 1 rue du Barrage, 67300 Schiltigheim. 03 88 81 67 71. Du lundi au vendredi de 7h00 à 18h00."
+---
+{% include page-header.html eyebrow="Venez nous voir" lead="Un coup de fil, un message ou un passage : on vous attend." %}
+
+<section class="section">
+  <div class="container split split-top">
+    <div class="stack">
+      <div class="contact-list">
+        <a class="contact-item" href="{{ site.cafe.maps }}">
+          <span class="info-icon">{% include icon.html name="pin" %}</span>
+          <span><strong>{{ site.cafe.name }}</strong><br>{{ site.cafe.street }}<br>{{ site.cafe.postcode }} {{ site.cafe.city | upcase }}</span>
+        </a>
+        <a class="contact-item" href="tel:{{ site.cafe.phone_intl }}">
+          <span class="info-icon">{% include icon.html name="phone" %}</span>
+          <span><strong>Téléphone</strong><br>{{ site.cafe.phone }}</span>
+        </a>
+        <a class="contact-item" href="mailto:{{ site.cafe.email }}">
+          <span class="info-icon">{% include icon.html name="mail" %}</span>
+          <span><strong>E-mail</strong><br>{{ site.cafe.email }}</span>
+        </a>
+        <div class="contact-item">
+          <span class="info-icon">{% include icon.html name="clock" %}</span>
+          <span><strong>Horaires</strong><br>{{ site.cafe.days }}<br>{{ site.cafe.hours }}</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="h3">Suivez-nous</h2>
+        <div class="socials socials-large">
+          <a href="{{ site.cafe.facebook }}">{% include icon.html name="facebook" %} Facebook</a>
+          <a href="{{ site.cafe.instagram }}">{% include icon.html name="instagram" %} Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe title="Plan d'accès au P'tit Café" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564.2534799522632!2d7.749621289772142!3d48.603973648312454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c868d3b04aa7%3A0x989a249c254c5666!2sLe%20p'tit%20Caf%C3%A9!5e0!3m2!1sfr!2sfr!4v1569181160961!5m2!1sfr!2sfr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

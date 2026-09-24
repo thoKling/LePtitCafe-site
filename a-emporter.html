@@ -1,0 +1,79 @@
+---
+layout: default
+title: Formules à emporter
+permalink: /a-emporter/
+description: "Formules déjeuner à emporter du P'tit Café à Schiltigheim : sandwichs, malicettes, paninis, salades. Commandes jusqu'à 11h45."
+---
+{% include page-header.html eyebrow="Sur le pouce" lead="Réservez votre formule déjeuner et passez la récupérer : sandwichs, malicettes, paninis, salades ou plat chaud." %}
+
+<section class="section">
+  <div class="container">
+    <div class="gallery">
+      {% for f in site.data.formules.photos %}
+      <figure class="gallery-item">
+        <img src="{{ '/assets/img/' | append: f.img | relative_url }}" alt="{{ f.name }}" loading="lazy" width="768" height="614">
+        <figcaption>{{ f.name }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Tarifs</p>
+      <h2>Les formules à emporter</h2>
+    </div>
+
+    <ul class="price-list">
+      {% for t in site.data.formules.tarifs %}
+      <li>
+        <div>
+          <span class="price-name">Formule {{ t.name }}</span>
+          <span class="price-content">{{ t.content }}</span>
+        </div>
+        <span class="price-dots" aria-hidden="true"></span>
+        <span class="price">{{ t.price }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="notes">
+      <p><strong>* Desserts inclus :</strong> {{ site.data.formules.desserts }}. Un autre dessert (tartes, macarons, gâteaux, cheesecake) est possible pour 1 € de plus sur le prix de la formule.</p>
+      <p><strong>* Boissons incluses :</strong> canette 33 cl ou eau 50 cl. Une boisson hors formule est possible pour 1 € de plus sur le prix de la formule.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="commande">
+  <div class="container split split-top">
+    <div>
+      <p class="eyebrow">Commande</p>
+      <h2>Commandez votre formule déjeuner</h2>
+      <p>Nous prenons les commandes <strong>jusqu'à 11h45</strong>. Passé cette heure, votre commande risque de ne pas être prise en compte.</p>
+      <p>Le formulaire permet de réserver une formule <strong>ou</strong> de commander des articles à l'unité. Si vous souhaitez plusieurs fois le même article, précisez-le en commentaire ou appelez-nous au <a href="tel:{{ site.cafe.phone_intl }}">{{ site.cafe.phone }}</a>.</p>
+      <p class="muted small">L'envoi ouvre votre messagerie avec la commande pré-remplie : il ne vous reste qu'à l'envoyer.</p>
+    </div>
+
+    <form class="form card" data-mailto="{{ site.cafe.email }}" data-subject="Commande à emporter">
+      <div class="field-row">
+        <label>Nom *<input name="Nom" required autocomplete="name"></label>
+        <label>Téléphone *<input name="Téléphone" type="tel" required autocomplete="tel"></label>
+      </div>
+      <div class="field-row">
+        <label>Jour de retrait *<input name="Jour" type="date" required></label>
+        <label>Heure de retrait *<input name="Heure" type="time" min="11:30" max="14:00" required></label>
+      </div>
+      <label>Formule
+        <select name="Formule">
+          <option value="">Articles à l'unité</option>
+          {% for t in site.data.formules.tarifs %}<option>Formule {{ t.name }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>Votre commande *<textarea name="Commande" rows="4" required placeholder="Ex. : sandwich poulet-crudités, brownie, eau 50 cl"></textarea></label>
+      <label>Commentaire<textarea name="Commentaire" rows="2"></textarea></label>
+      <button class="btn" type="submit">Envoyer la commande</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+layout: default
+title: Carte sur place
+permalink: /carte/
+description: "L'ardoise du jour du P'tit Café à Schiltigheim : lasagnes, quiches, croques, omelettes, grandes salades, sandwichs et paninis."
+---
+{% include page-header.html eyebrow="L'ardoise" lead="Des plats faits maison, à déguster sur place du lundi au vendredi." %}
+
+<section class="section">
+  <div class="container split split-top">
+    <div class="chalkboard">
+      <h2 class="chalk-title">Aujourd'hui sur place</h2>
+      <ul class="chalk-list">
+        {% for plat in site.data.carte.plats %}
+        <li>
+          <span class="chalk-name">{{ plat.name }}</span>
+          <span class="chalk-detail">{{ plat.detail }}</span>
+          {% if plat.variants %}<span class="chalk-variants">{{ plat.variants }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <hr class="chalk-rule">
+      <ul class="chalk-list chalk-small">
+        {% for item in site.data.carte.aussi %}<li><span class="chalk-name">{{ item }}</span></li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="stack">
+      <div class="card">
+        <h3>Réserver une table</h3>
+        <p>Pour être sûr d'avoir votre place à midi, pensez à réserver.</p>
+        <a class="btn" href="{{ '/reservation/' | relative_url }}">Réservation</a>
+      </div>
+      <div class="card">
+        <h3>Plutôt à emporter ?</h3>
+        <p>Les tarifs de la vente à emporter sont disponibles sur la page des formules.</p>
+        <a class="btn btn-outline" href="{{ '/a-emporter/' | relative_url }}">Formules à emporter</a>
+      </div>
+      <figure class="rounded-img">
+        <img src="{{ '/assets/img/interieur.jpg' | relative_url }}" alt="La salle du P'tit Café avec ses tables dressées et son ardoise" loading="lazy" width="528" height="960">
+      </figure>
+    </div>
+  </div>
+</section>

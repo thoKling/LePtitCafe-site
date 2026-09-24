@@ -1,0 +1,41 @@
+title: "Le P'tit Café"
+city: Schiltigheim
+tagline: "Coffee Shop · Snacking · Food"
+description: >-
+  Le P'tit Café à Schiltigheim : café bio, petits déjeuners dès 7h, déjeuners faits maison,
+  formules à emporter et service traiteur. Du lundi au vendredi de 7h00 à 18h00.
+lang: fr-FR
+
+# Served from https://thokling.github.io/LePtitCafe-site/
+# Set to "" if the site is moved to a custom domain (e.g. le-ptit-cafe.fr).
+baseurl: "/LePtitCafe-site"
+url: "https://thokling.github.io"
+
+# Optional banner shown at the top of every page. Leave empty to hide it.
+# Example: "Le café est actuellement fermé pour congés — réouverture le lundi 2 septembre."
+announcement: ""
+
+cafe:
+  name: "Le p'tit café"
+  street: "1, rue du Barrage"
+  postcode: "67300"
+  city: "Schiltigheim"
+  phone: "03 88 81 67 71"
+  phone_intl: "+33388816771"
+  email: "leptitcafeschiltigheim@gmail.com"
+  days: "Du lundi au vendredi"
+  hours: "7h00 – 18h00"
+  facebook: "https://www.facebook.com/leptitcafeschiltigheim/"
+  instagram: "https://www.instagram.com/le_ptit_cafe_/"
+  maps: "https://www.google.com/maps/search/?api=1&query=Le+p%27tit+Caf%C3%A9+1+rue+du+Barrage+67300+Schiltigheim"
+
+nav:
+  - { title: "Accueil", url: "/" }
+  - { title: "Carte sur place", url: "/carte/" }
+  - { title: "À emporter", url: "/a-emporter/" }
+  - { title: "Groupes & traiteur", url: "/groupes/" }
+  - { title: "Contact", url: "/contact/" }
+
+exclude:
+  - README.md
+  - LICENSE

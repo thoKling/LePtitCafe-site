@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container info-cards">
+    <div class="info-card">
+      <span class="info-icon">{% include icon.html name="clock" %}</span>
+      <h3>Horaires</h3>
+      <p>{{ site.cafe.days }}<br><strong>{{ site.cafe.hours }}</strong></p>
+    </div>
+    <div class="info-card">
+      <span class="info-icon">{% include icon.html name="pin" %}</span>
+      <h3>Adresse</h3>
+      <p>{{ site.cafe.street }}<br>{{ site.cafe.postcode }} {{ site.cafe.city }}</p>
+      <a class="link-arrow" href="{{ site.cafe.maps }}">Itinéraire</a>
+    </div>
+    <div class="info-card">
+      <span class="info-icon">{% include icon.html name="phone" %}</span>
+      <h3>Téléphone</h3>
+      <p><a href="tel:{{ site.cafe.phone_intl }}"><strong>{{ site.cafe.phone }}</strong></a></p>
+      <a class="link-arrow" href="{{ '/contact/' | relative_url }}">Tous nos contacts</a>
+    </div>
+  </div>
+</section>

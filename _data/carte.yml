@@ -1,0 +1,17 @@
+# "Aujourd'hui sur place" — edit this file to update the chalkboard menu.
+plats:
+  - name: "Lasagnes de bœuf"
+    detail: "et salade"
+  - name: "Quiche aux légumes"
+    detail: "et salade"
+  - name: "Les croques"
+    detail: "accompagnés de frites et/ou salade"
+    variants: "croque monsieur, croque légumes, croque chèvre, croque burger"
+  - name: "Omelettes"
+    detail: "accompagnées de frites et/ou salade"
+  - name: "Grandes salades"
+    detail: "au poulet, au saumon, au chèvre chaud ou végétarienne"
+
+aussi:
+  - "Portion de frites"
+  - "Sandwichs, malicettes, paninis"

@@ -1,0 +1,79 @@
+---
+layout: default
+title: Accueil
+---
+<section class="hero">
+  <img class="hero-img" src="{{ '/assets/img/hero.jpg' | relative_url }}" alt="La terrasse du P'tit Café sous son auvent rouge, rue du Barrage à Schiltigheim">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">{{ site.tagline }}</p>
+    <h1>Le p'tit endroit sympathique que vous cherchiez.</h1>
+    <p class="hero-lead">Café bio, petits déjeuners, déjeuners faits maison et formules à emporter, au cœur de Schiltigheim.</p>
+    <div class="hero-actions">
+      <a class="btn" href="{{ '/reservation/' | relative_url }}">Réserver une table</a>
+      <a class="btn btn-ghost" href="{{ '/a-emporter/' | relative_url }}">Commander à emporter</a>
+    </div>
+    <p class="hero-hours">{% include icon.html name="clock" %} {{ site.cafe.days }}, {{ site.cafe.hours }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Le p'tit café, c'est…</p>
+      <h2>Un café, une cantine, une terrasse — et une équipe aux petits soins.</h2>
+    </div>
+
+    <div class="moments">
+      <article class="moment">
+        <span class="moment-time">dès 7h00</span>
+        <h3>Le petit déjeuner</h3>
+        <p>Venez le matin prendre votre petit déjeuner ou chercher vos viennoiseries.</p>
+      </article>
+      <article class="moment">
+        <span class="moment-time">à toute heure</span>
+        <h3>Un café bio</h3>
+        <p>Le petit endroit sympathique pour boire un café bio entre deux rendez-vous.</p>
+      </article>
+      <article class="moment">
+        <span class="moment-time">à midi</span>
+        <h3>Le déjeuner fait maison</h3>
+        <p>Pendant votre pause, <a href="{{ '/carte/' | relative_url }}">déjeunez rapidement</a> de produits faits maison.</p>
+      </article>
+      <article class="moment">
+        <span class="moment-time">sur le pouce</span>
+        <h3>À emporter</h3>
+        <p>Votre sandwich, votre salade ou votre panini <a href="{{ '/a-emporter/' | relative_url }}">à emporter</a> avant de retourner travailler.</p>
+      </article>
+      <article class="moment">
+        <span class="moment-time">l'après-midi</span>
+        <h3>Thé &amp; pâtisserie</h3>
+        <p>Un endroit calme pour retrouver une amie autour d'un thé Dammann et d'une pâtisserie.</p>
+      </article>
+      <article class="moment">
+        <span class="moment-time">l'été</span>
+        <h3>La terrasse</h3>
+        <p>Une terrasse ombragée pour déguster entre amis un smoothie ou une coupe de glace.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split">
+    <figure class="split-media">
+      <img src="{{ '/assets/img/produits.jpg' | relative_url }}" alt="Sélection de produits du P'tit Café : pâtisseries, smoothie, croque, salades de fruits, chocolat chaud, lasagnes, sandwich et cake" loading="lazy" width="1280" height="720">
+    </figure>
+    <div class="split-body">
+      <p class="eyebrow">Fait maison</p>
+      <h2>Tout ça, et surtout une équipe qui fait tout pour que votre passage soit des plus agréables.</h2>
+      <p>Plats du jour, croques, omelettes, grandes salades, pâtisseries, smoothies et glaces : découvrez l'ardoise du jour ou composez votre formule à emporter.</p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ '/carte/' | relative_url }}">Voir la carte du jour</a>
+        <a class="btn btn-outline" href="{{ '/groupes/' | relative_url }}">Groupes &amp; traiteur</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include infos.html %}

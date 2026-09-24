@@ -1,0 +1,19 @@
+# Take-away formulas — edit prices here.
+photos:
+  - { name: "Formule sandwich", img: "formule-sandwich.jpg" }
+  - { name: "Formule malicette", img: "formule-malicette.jpg" }
+  - { name: "Formule panini", img: "formule-panini.jpg" }
+  - { name: "Formule salade", img: "formule-salade.jpg" }
+
+tarifs:
+  - { name: "Basic", content: "1 sandwich basic + 1 dessert* + 1 boisson*", price: "10,00 €" }
+  - { name: "Classique", content: "1 sandwich classique + 1 dessert* + 1 boisson*", price: "10,80 €" }
+  - { name: "Panini", content: "1 panini + 1 dessert* + 1 boisson*", price: "12,00 €" }
+  - { name: "Panini / frites", content: "1 panini + 1 portion de frites + 1 boisson*", price: "12,50 €" }
+  - { name: "Malicette", content: "1 malicette + 1 dessert* + 1 boisson*", price: "9,00 €" }
+  - { name: "Soupe", content: "1 malicette au choix + 1 bol de soupe + 1 dessert*", price: "13,00 €" }
+  - { name: "Salade 1", content: "1 salade végé ou césar + 1 dessert* + 1 boisson*", price: "13,00 €" }
+  - { name: "Salade 2", content: "1 salade saumon + 1 dessert* + 1 boisson*", price: "13,50 €" }
+  - { name: "Traiteur", content: "1 plat chaud + 1 dessert* + 1 boisson*", price: "Selon le plat" }
+
+desserts: "muffin, cookie, brownie, brookie, donut, éclair, salade de fruits, fromage blanc sur coulis, gâteau basque, mousse au chocolat, tiramisu, cake"
