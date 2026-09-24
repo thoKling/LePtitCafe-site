@@ -11,10 +11,12 @@
   <meta property="og:image" content="{{ '/assets/img/hero.jpg' | absolute_url }}">
   <meta property="og:type" content="website">
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% assign v = site.time | date: '%s' %}
+  <link rel="preload" href="{{ '/assets/fonts/inter.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/fraunces.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/caveat.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {% if page.preload_image %}<link rel="preload" href="{{ page.preload_image | relative_url }}" as="image" fetchpriority="high">{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ v }}">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -49,7 +51,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     {{ content }}
   </main>
 
@@ -90,6 +92,6 @@
     </div>
   </footer>
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ v }}" defer data-sw="{{ '/sw.js' | relative_url }}" data-base="{{ site.baseurl }}/"></script>
 </body>
 </html>

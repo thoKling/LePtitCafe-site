@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Accueil
+preload_image: /assets/img/hero.webp
 ---
 <section class="hero">
-  <img class="hero-img" src="{{ '/assets/img/hero.jpg' | relative_url }}" alt="La terrasse du P'tit Café sous son auvent rouge, rue du Barrage à Schiltigheim">
+  <img class="hero-img" src="{{ '/assets/img/hero.webp' | relative_url }}" width="750" height="370" fetchpriority="high" alt="La terrasse du P'tit Café sous son auvent rouge, rue du Barrage à Schiltigheim">
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <p class="eyebrow">{{ site.tagline }}</p>
@@ -62,7 +63,7 @@ title: Accueil
 <section class="section section-alt">
   <div class="container split">
     <figure class="split-media">
-      <img src="{{ '/assets/img/produits.jpg' | relative_url }}" alt="Sélection de produits du P'tit Café : pâtisseries, smoothie, croque, salades de fruits, chocolat chaud, lasagnes, sandwich et cake" loading="lazy" width="1280" height="720">
+      <img src="{{ '/assets/img/produits.webp' | relative_url }}" alt="Sélection de produits du P'tit Café : pâtisseries, smoothie, croque, salades de fruits, chocolat chaud, lasagnes, sandwich et cake" loading="lazy" decoding="async" width="1280" height="720">
     </figure>
     <div class="split-body">
       <p class="eyebrow">Fait maison</p>

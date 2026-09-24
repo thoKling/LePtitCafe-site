@@ -1,9 +1,9 @@
 # Take-away formulas — edit prices here.
 photos:
-  - { name: "Formule sandwich", img: "formule-sandwich.jpg" }
-  - { name: "Formule malicette", img: "formule-malicette.jpg" }
-  - { name: "Formule panini", img: "formule-panini.jpg" }
-  - { name: "Formule salade", img: "formule-salade.jpg" }
+  - { name: "Formule sandwich", img: "formule-sandwich.webp" }
+  - { name: "Formule malicette", img: "formule-malicette.webp" }
+  - { name: "Formule panini", img: "formule-panini.webp" }
+  - { name: "Formule salade", img: "formule-salade.webp" }
 
 tarifs:
   - { name: "Basic", content: "1 sandwich basic + 1 dessert* + 1 boisson*", price: "10,00 €" }

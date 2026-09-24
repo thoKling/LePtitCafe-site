@@ -1,3 +1,8 @@
+/* Self-hosted variable fonts (latin subset), preloaded in the layout */
+@font-face { font-family: "Inter"; src: url("../fonts/inter.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("../fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("../fonts/caveat.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+
 :root {
   --cream: #f7f0e6;
   --paper: #fffaf3;
@@ -289,3 +294,8 @@ a.contact-item:hover { border-color: var(--red); color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Page transitions: header stays put, only the content crossfades */
+@view-transition { navigation: auto; }
+.site-header { view-transition-name: site-header; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 180ms; }

@@ -11,7 +11,7 @@ description: "Formules déjeuner à emporter du P'tit Café à Schiltigheim : sa
     <div class="gallery">
       {% for f in site.data.formules.photos %}
       <figure class="gallery-item">
-        <img src="{{ '/assets/img/' | append: f.img | relative_url }}" alt="{{ f.name }}" loading="lazy" width="768" height="614">
+        <img src="{{ '/assets/img/' | append: f.img | relative_url }}" alt="{{ f.name }}" loading="lazy" decoding="async" width="640" height="512">
         <figcaption>{{ f.name }}</figcaption>
       </figure>
       {% endfor %}
