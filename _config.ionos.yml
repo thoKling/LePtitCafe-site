@@ -1,0 +1,4 @@
+# Overrides for the IONOS build (le-ptit-cafe.fr), used by scripts/deploy-ionos.sh.
+# Switch to "https://le-ptit-cafe.fr" once the SSL certificate is active.
+baseurl: ""
+url: "http://le-ptit-cafe.fr"

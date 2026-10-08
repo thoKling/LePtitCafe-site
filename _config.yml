@@ -42,3 +42,7 @@ nav:
 exclude:
   - README.md
   - LICENSE
+  - _config.ionos.yml
+  - scripts
+  - password.txt
+  - sshpassword.txt

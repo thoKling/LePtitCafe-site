@@ -22,6 +22,14 @@ docker run --rm -p 4000:4000 -v "$PWD":/srv/jekyll -w /srv/jekyll ruby:3.3 \
 
 Puis ouvrir http://localhost:4000/LePtitCafe-site/
 
+## Publier sur IONOS (le-ptit-cafe.fr)
+
+```bash
+scripts/deploy-ionos.sh
+```
+
+Le script construit le site avec `_config.ionos.yml` et remplace les fichiers du dossier `app620338136` sur l'hébergement IONOS. Il faut Docker et un fichier `password.txt` à la racine du projet contenant le mot de passe SFTP (ce fichier est ignoré par git et exclu du site).
+
 ## Domaine personnalisé
 
 Pour servir le site sur `le-ptit-cafe.fr` : mettre `baseurl: ""` et `url: "https://le-ptit-cafe.fr"` dans `_config.yml`, puis configurer le domaine dans *Settings → Pages*.
