@@ -2,7 +2,7 @@
 layout: default
 title: Contact
 permalink: /contact/
-description: "Le P'tit Café, 1 rue du Barrage, 67300 Schiltigheim. 03 88 81 67 71. Du lundi au vendredi de 7h00 à 18h00."
+description: "Le P'tit Café, 1 rue du Barrage, 67300 Schiltigheim. 03 88 81 67 71. Du lundi au mercredi de 7h00 à 18h00, jeudi et vendredi de 9h00 à 20h30."
 ---
 {% include page-header.html eyebrow="Venez nous voir" lead="Un coup de fil, un message ou un passage : on vous attend." %}
 
@@ -24,7 +24,7 @@ description: "Le P'tit Café, 1 rue du Barrage, 67300 Schiltigheim. 03 88 81 67 
         </a>
         <div class="contact-item">
           <span class="info-icon">{% include icon.html name="clock" %}</span>
-          <span><strong>Horaires</strong><br>{{ site.cafe.days }}<br>{{ site.cafe.hours }}</span>
+          <span><strong>Horaires</strong>{% for slot in site.cafe.schedule %}<br>{{ slot.days }} : {{ slot.hours }}{% endfor %}</span>
         </div>
       </div>
 

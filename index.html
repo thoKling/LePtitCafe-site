@@ -14,7 +14,7 @@ preload_image: /assets/img/hero.webp
       <a class="btn" href="{{ '/reservation/' | relative_url }}">Réserver une table</a>
       <a class="btn btn-ghost" href="{{ '/a-emporter/' | relative_url }}">Commander à emporter</a>
     </div>
-    <p class="hero-hours">{% include icon.html name="clock" %} {{ site.cafe.days }}, {{ site.cafe.hours }}</p>
+    <p class="hero-hours">{% include icon.html name="clock" %} {% for slot in site.cafe.schedule %}{{ slot.days }}, {{ slot.hours }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
   </div>
 </section>
 

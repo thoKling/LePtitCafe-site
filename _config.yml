@@ -3,7 +3,7 @@ city: Schiltigheim
 tagline: "Coffee Shop · Snacking · Food"
 description: >-
   Le P'tit Café à Schiltigheim : café bio, petits déjeuners dès 7h, déjeuners faits maison,
-  formules à emporter et service traiteur. Du lundi au vendredi de 7h00 à 18h00.
+  formules à emporter et service traiteur. Du lundi au mercredi de 7h00 à 18h00, jeudi et vendredi de 9h00 à 20h30.
 lang: fr-FR
 
 # Served from https://thokling.github.io/LePtitCafe-site/
@@ -22,9 +22,12 @@ cafe:
   city: "Schiltigheim"
   phone: "03 88 81 67 71"
   phone_intl: "+33388816771"
-  email: "leptitcafeschiltigheim@gmail.com"
-  days: "Du lundi au vendredi"
-  hours: "7h00 – 18h00"
+  email: "thibaut.hustache7@gmail.com"
+  company: "HUSTACHE SARL"
+  # Opening hours, one entry per group of days.
+  schedule:
+    - { days: "Du lundi au mercredi", hours: "7h00 – 18h00" }
+    - { days: "Du jeudi au vendredi", hours: "9h00 – 20h30" }
   facebook: "https://www.facebook.com/leptitcafeschiltigheim/"
   instagram: "https://www.instagram.com/le_ptit_cafe_/"
   maps: "https://www.google.com/maps/search/?api=1&query=Le+p%27tit+Caf%C3%A9+1+rue+du+Barrage+67300+Schiltigheim"

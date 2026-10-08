@@ -3,7 +3,7 @@
     <div class="info-card">
       <span class="info-icon">{% include icon.html name="clock" %}</span>
       <h3>Horaires</h3>
-      <p>{{ site.cafe.days }}<br><strong>{{ site.cafe.hours }}</strong></p>
+      {% for slot in site.cafe.schedule %}<p>{{ slot.days }}<br><strong>{{ slot.hours }}</strong></p>{% endfor %}
     </div>
     <div class="info-card">
       <span class="info-icon">{% include icon.html name="pin" %}</span>

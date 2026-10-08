@@ -76,7 +76,7 @@
       </div>
       <div>
         <h2 class="footer-title">Horaires</h2>
-        <p>{{ site.cafe.days }}<br><strong>{{ site.cafe.hours }}</strong></p>
+        {% for slot in site.cafe.schedule %}<p>{{ slot.days }}<br><strong>{{ slot.hours }}</strong></p>{% endfor %}
       </div>
       <div>
         <h2 class="footer-title">Liens</h2>
@@ -88,7 +88,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© {{ site.time | date: "%Y" }} ACF sas — {{ site.title }}, {{ site.city }}</p>
+      <p>© {{ site.time | date: "%Y" }} {{ site.cafe.company }} — {{ site.title }}, {{ site.city }}</p>
     </div>
   </footer>
 
